@@ -1,22 +1,4 @@
-text = \lyricmode {
-  O mis -- tress mine, where are you roam -- ing?
-  O, stay and hear! Your true love’s com -- ing,
-    That can sing both high and low.
-  Trip no fur -- ther, pret -- ty sweet -- ing.
-  Jour -- neys end in lov -- er’s meet -- ing,
-    Ev’ -- ry wise man’s son doth know.
-
-  What is love? ’Tis not here -- af -- ter.
-  Pre -- sent mirth hath pres -- ent laugh -- ter.
-    What’s to come is still un -- sure.
-  In de -- lay there lies no plen -- ty;
-  Then come kiss me, sweet and twen -- ty.
-    Youth’s a stuff will not en -- dure, not en -- dure.
-  
-  Mis -- tress mine, where are you roam -- ing?
-}
-
-voice = \relative {
+melody = \relative ees {
   \autoBeamOff
   \clef "treble_8"
   \key ees \major
@@ -49,3 +31,26 @@ voice = \relative {
   
   \bar "|."
 }
+
+text = \lyricmode {
+  O mis -- tress mine, where are you roam -- ing?
+  O, stay and hear! Your true love’s com -- ing,
+    That can sing both high and low.
+  Trip no fur -- ther, pret -- ty sweet -- ing.
+  Jour -- neys end in lov -- er’s meet -- ing,
+    Ev’ -- ry wise man’s son doth know.
+
+  What is love? ’Tis not here -- af -- ter.
+  Pre -- sent mirth hath pres -- ent laugh -- ter.
+    What’s to come is still un -- sure.
+  In de -- lay there lies no plen -- ty;
+  Then come kiss me, sweet and twen -- ty.
+    Youth’s a stuff will not en -- dure, not en -- dure.
+  
+  Mis -- tress mine, where are you roam -- ing?
+}
+
+voice = <<
+  \new Voice = "solo" { \melody }
+  \new Lyrics \lyricsto "solo" { \text }
+>>

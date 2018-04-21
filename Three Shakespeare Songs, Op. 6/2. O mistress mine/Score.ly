@@ -5,6 +5,14 @@
 \include "Piano.ly"
 \include "Voice.ly"
 
+\header {
+  composer = "Roger Quilter (1877–1953)"
+  opus = "Op. 6, No. 2"
+  poet = "William Shakespeare (1564–1616)"
+  tagline = ##f
+  title = "O mistress mine"
+}
+
 \score {
   <<
     \voice

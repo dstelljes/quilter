@@ -1,4 +1,4 @@
-piano = \new GrandStaff <<
+piano = \new PianoStaff <<
   \new Staff \relative ees'' {
     \clef treble
     \key ees \major
@@ -8,7 +8,7 @@ piano = \new GrandStaff <<
     <<
       { g8. f16 ees8. c16 d8. bes16 c8. g16 f g f8 ees16 f g8 <c c,>4 <bes bes,>4. <aes aes,>8 <g ees g,>8 <f d bes>8 }
       \\
-      { c'8 ces bes4 aes g c,8 b c d g f~ f8 ees c d s4 }
+      { c'8-> ces bes4-> aes-> g-> c,8 [ b ] c [ d ] g [ f~ ] f8 ees c d s4 }
     >>
     <ees c g>4 <f d bes> <g ees bes>8 <aes ees c> <g d bes>4 <f c>
     <<
@@ -24,15 +24,15 @@ piano = \new GrandStaff <<
     >>
     <c' f, d c>8 <bes ees, bes> <ees g, ees> <c f, d> <bes ees, c>4
     <<
-      { <g ees> <g ees> <f aes,> ees8 f f ees bes' ( aes g f ) }
+      { <g ees> <g ees> <f aes,> ees8 f f [ ees ] bes' ( aes g f ) }
       \\
-      { c bes bes a ees' d <des bes> <des bes> c4 <ees c> <c aes>8 <d aes> }
+      { c bes bes [ a ] ees' [ d ] <des bes> [ <des bes> ] c4 <ees c> <c aes>8 <d aes> }
     >>
     <f d aes>4 ( <ees g,> )
     <<
       { g'8. f16 ees8. c16 d8. bes16 c8. g16 f g f8 ees16 f g8 <c c,>4 <bes bes,>4. <aes aes,>8 <g ees g,>8 <f d bes>8 }
       \\
-      { c'8 ces bes4 aes g c,8 b c d g f~ f8 ees c d s4 }
+      { c'8-> ces bes4-> aes-> g-> c,8 [ b ] c [ d ] g [ f~ ] f8 ees c d s4 }
     >>
     <ees c g> <f d bes> <g ees bes>8 <c aes ees>
     <<
@@ -56,10 +56,10 @@ piano = \new GrandStaff <<
     <<
       { <ees ees,>4. <c d, c>8 <bes bes,> <g c, bes> <g ees c>4 <f aes,> }
       \\
-      { bes8 ( aes g f ees ) ees bes a ees' d }
+      { bes8 ( aes g f ees ) [ ees ] bes [ a ] ees' [ d ] }
     >>
     <<
-      { ees f f4 ees des' c bes8 ( aes g f ) }
+      { ees f f4 ees des'-> c bes8 ( aes g f ) }
       \\
       { <des bes>4 c2 f8 f f e <ees c>4 <c aes>8 <d aes> }
     >>
@@ -74,13 +74,20 @@ piano = \new GrandStaff <<
     \bar "|."
   }
 
+  \new Dynamics {
+    s4\mf s2.*2 s2\> s4\!\mp s2.*7 s2 s4\< s\! s\> s s s\! s s s2\> s4 s\!
+    s4-\tweak X-offset #-2.5 \f s2.*2 s2\> s4\!\p s2.*5 s2 s4-\crescendo s2. s2 s4\f s4. s8\> s4 s s8\! s s4\mf
+    s2. s4 s2\> s4 s\! s4\mp s2 s4\< s\! s s\> s s\! s\>\p s s\!\pp
+  }
+
   \new Staff \relative ees {
     \clef bass
     \key ees \major
     \partial 4
     \time 3/4
+
     <<
-      { d'4 c8 ees bes d aes c aes g g4. f8~ f ees4 bes8 bes4~ <bes ees,>2 ees8 f, }
+      { d'4 c8 [ ees ] bes [ d ] aes [ c ] aes g g4. f8~ f ees4 bes8 bes4~ <bes ees,>2 ees8 f, }
       \\
       { aes'4 g f ees d c8 bes aes4 g f8 bes ees,4~ \tweak Stem.transparent ##t ees2 s4 }
     >>
@@ -92,7 +99,7 @@ piano = \new GrandStaff <<
     >>
     c8 c'4 c,8 f4 bes,8 ( f' bes f' aes4 ) g2 f4 g8 aes bes4 aes,8 g c aes g4 c f, bes <ees g,> <ees aes,> <f f,> <bes, bes,> <bes ees,>2
     <<
-      { d'4 c8 ees bes d aes c aes g g4. f8~ f ees4 bes8 bes4~ <bes ees,>2 ees8 f, }
+      { d'4 c8 [ ees ] bes [ d ] aes [ c ] aes g g4. f8~ f ees4 bes8 bes4~ <bes ees,>2 ees8 f, }
       \\
       { aes'4 g f ees d c8 bes aes4 g f8 bes ees,4~ \tweak Stem.transparent ##t ees2 s4 }
     >>
